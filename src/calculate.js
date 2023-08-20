@@ -54,7 +54,7 @@ export function calculateEquity (hands, board = [], iterations = 100000, exhaust
   }))
 }
 
-function analyse (results, board) {
+export function analyse (results, board) {
   const ranks = results.map(result => {
     if (result.hand.includes('..')) {
       const randomCards = deal(board.concat(...results.map(r => r.hand)), 4)
